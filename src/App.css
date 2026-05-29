@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #8b4513 0%, #d2691e 50%, #a0522d 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card */
+.feedback-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+  color: white;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.cafe-title {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.cafe-subtitle {
+  font-size: 1em;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+/* Form */
+.form-content {
+  padding: 30px;
+}
+
+/* Question */
+.question-block {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.question-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.question-number {
+  background: #d2691e;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.question-text {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Stars */
+.rating-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.star-button {
+  background: none;
+  border: 2px solid #ddd;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.star-button:hover {
+  border-color: #d2691e;
+  transform: scale(1.1);
+}
+
+.star-button.selected {
+  background: #d2691e;
+  border-color: #d2691e;
+}
+
+.rating-label {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Comments */
+.comments-section {
+  margin-top: 30px;
+}
+
+.comments-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  resize: none;
+}
+
+.comments-input:focus {
+  outline: none;
+  border-color: #d2691e;
+}
+
+/* Button */
+.submit-button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background: #d2691e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.submit-button:hover {
+  background: #b85a1a;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cafe-title {
+    font-size: 1.6em;
+  }
+
+  .form-content {
+    padding: 20px;
+  }
+
+  .star-button {
+    font-size: 1.2em;
+  }
+}
+/* THANK YOU CARD FIX */
+.thank-you-card {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+
+  /* important fix */
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.thank-you-header {
+  background: linear-gradient(135deg, #8b4513, #d2691e);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+}
+
+/* CONTENT */
+.thank-you-content {
+  padding: 30px;
+  text-align: center;
+}
+
+/* TEXT */
+.thank-you-content .message {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.thank-you-content .subtitle {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.thank-you-content .submitted-date {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+/* GIVE ANOTHER FEEDBACK BUTTON */
+.reset-button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #d2691e, #8b4513);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.reset-button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #b85a1a, #6f3710);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.reset-button:active {
+  transform: scale(0.97);
+}
