@@ -40,7 +40,8 @@ const handleSubmit = async () => {
 
     console.log("📊 Submitting feedback with rating:", rating, "from", ratingValues)
 
-    const res = await fetch("http://localhost:8000/api/feedback", {
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+    const res = await fetch(`${apiUrl}/api/feedback`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
